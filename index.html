@@ -10,28 +10,26 @@
 
   <!-- HEADER -->
   <header>
-    <div class="logo-title">
-      <img src="images/USIU_Africa_Logo.png" alt="USIU-A Logo" class="logo">
+    <div class="header-container">
+      <img src="logo-placeholder.png" alt="USIU-A Logo" class="logo">
       <h1>Event Booking Dashboard</h1>
     </div>
   </header>
 
-  <!-- MAIN -->
+  <!-- MAIN CONTENT -->
   <main>
     <section class="event-section">
       <h2>Upcoming Events</h2>
       <table id="event-table">
         <thead>
           <tr>
-            <th>Event Name</th>
-            <th>Date</th>
-            <th>Venue</th>
-            <th>Slots Available</th>
-            <th>Register</th>
+            <th>Event</th>
+            <th>Date & Venue</th>
+            <th>Slots / Action</th>
           </tr>
         </thead>
         <tbody id="event-body">
-          <!-- JS will populate rows -->
+          <!-- JavaScript will populate rows -->
         </tbody>
       </table>
     </section>
@@ -40,10 +38,12 @@
     <section class="form-section">
       <h2>Register for an Event</h2>
       <form id="register-form">
-        <input type="text" id="name" placeholder="Full Name" required>
-        <input type="text" id="student-id" placeholder="Student ID e.g. USIU1234" pattern="USIU[0-9]{4}" required>
+        <div class="form-row">
+          <input type="text" id="name" placeholder="Full Name" required>
+          <input type="text" id="student-id" placeholder="Student ID e.g. USIU1234" pattern="USIU[0-9]{4}" required>
+        </div>
         <select id="event-select"></select>
-        <button type="submit">Submit</button>
+        <button type="submit">Submit Registration</button>
       </form>
       <div id="form-message"></div>
     </section>
@@ -64,4 +64,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-

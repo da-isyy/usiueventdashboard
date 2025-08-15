@@ -22,10 +22,8 @@ function renderEvents() {
     let tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${ev.name}</td>
-      <td>${ev.date}</td>
-      <td>${ev.venue}</td>
-      <td>${ev.slots}</td>
-      <td><button ${ev.slots === 0 ? "disabled" : ""} onclick="bookSlot(${i})">
+      <td>${ev.date} / ${ev.venue}</td>
+      <td>${ev.slots} <button ${ev.slots === 0 ? "disabled" : ""} onclick="bookSlot(${i})">
         ${ev.slots === 0 ? "Fully Booked" : "Register"}</button></td>
     `;
     tbody.appendChild(tr);
